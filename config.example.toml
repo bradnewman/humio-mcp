@@ -1,18 +1,42 @@
-# Humio/LogScale MCP Server Configuration
-# Copy this file to config.toml and fill in your values.
-#
-# Config search order:
-#   1. $HUMIO_MCP_CONFIG env var
-#   2. ./config.toml  (same directory you run from)
-#   3. ~/.config/humio-mcp/config.toml
+default_cluster = "electron"
 
-default_cluster = "us-west-2"
+[clusters.electron]
+com_deployments = ["demo", "dev-alpha", "dev-bravo", "dev-charlie", "dev-echo", "dev-hotfix", "dev-olive"]
+url = "https://electron-us-west-2.cloudops.hpeserver.management/logs"
+# To get the tokens for each cluster
+# 1. Log into Humio
+# 2. Click your portrait in the upper right and select "Manage your account"
+# 3. Click "Personal API token" in the menu on the left
+# 4. Click the button, copy the token, and paste it here.
+# 5. Repeat for each cluster.
+token = "H9..."
 
-[clusters.us-west-2]
-url = "https://your-humio-instance.example.com/logs"
-token = "your-api-token-here"
+[clusters.proton]
+com_deployments = ["qa", "integ1", "integ2", "integ3", "integ4", "integ5", "integ6", "integ7", "integ8", "integ9", "integ10"]
+url = "https://proton-us-west-2.cloudops.hpeserver.management/logs"
+token = "b0.."
 
-# Add more clusters as needed:
-# [clusters.eu-central-1]
-# url = "https://humio-eu.example.com/logs"
-# token = "another-token"
+[clusters.rugbystage]
+com_deployments = ["staging", "staging-customer"]
+url = "https://rugbystage-us-west-2.cloudops.hpeserver.management/logs"
+token = "o2.."
+
+[clusters.ccpreusw2]
+com_deployments = ["pre-prod", "pentest"]
+url = "https://ccpreusw2-us-west-2.cloudops.compute.cloud.hpe.com/logs"
+token = "cG.."
+
+[clusters.ccprodane1]
+com_deployments = ["ccprodane1"]
+url = "https://ccprodane1-ap-northeast-1.cloudops.compute.cloud.hpe.com/logs"
+token = "0p.."
+
+[clusters.ccprodeuc1]
+com_deployments = ["ccprodeuc1"]
+url = "https://ccprodeuc1-eu-central-1.cloudops.compute.cloud.hpe.com/logs"
+token = "nv.."
+
+[clusters.ccprodusw2]
+com_deployments = ["ccprodusw2"]
+url = "https://ccprodusw2-us-west-2.cloudops.compute.cloud.hpe.com/logs"
+token = "KD.."

@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "humio-mcp": {
+      "type": "stdio",
+      "command": "uv",
+      "tools": [
+        "execute_search"
+      ],
+      "args": [
+	"run",
+	"--directory",
+	"/home/brad/workspace/humio-mcp",
+	"mcp",
+	"run",
+	"src/humio_mcp/server.py"
+      ]
+    }
+  }
+}
