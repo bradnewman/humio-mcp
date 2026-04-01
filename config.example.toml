@@ -40,3 +40,18 @@ token = "nv.."
 com_deployments = ["ccprodusw2"]
 url = "https://ccprodusw2-us-west-2.cloudops.compute.cloud.hpe.com/logs"
 token = "KD.."
+
+[clusters.rugbytest]
+com_deployments = ["scale", "chaos"]
+url = "https://rugbytest-us-west-2.cloudops.hpeserver.management/logs"
+token = "vv.."
+
+[clusters.rugbyscale]
+com_deployments = []
+url = "https://rugbyscale-us-west-2.cloudops.hpeserver.management/logs"
+token = "vv.."
+
+[clusters.scale02]
+com_deployments = []
+url = "https://ccp.scale02-qa-usw2.qa.com.hpesandbox.net/logs"
+token = "vv.."
